@@ -1,0 +1,42 @@
+export const introMenu = [
+  {
+    id: 1,
+    number: "01",
+    title: "ABOUT",
+    target: "#about",
+    preview: "/images/about-preview.jpg",
+    description: "Who I am and what I do.",
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "PROJECTS",
+    target: "#projects",
+    preview: "/images/project-preview.jpg",
+    description: "Selected works and experiments.",
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "EXPERIENCE",
+    target: "#experience",
+    preview: "/images/experience-preview.jpg",
+    description: "Journey through design & engineering.",
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "SKILLS",
+    target: "#skills",
+    preview: "/images/skills-preview.jpg",
+    description: "Technologies and creative tools.",
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "CONTACT",
+    target: "#contact",
+    preview: "/images/contact-preview.jpg",
+    description: "Let's build something together.",
+  },
+];

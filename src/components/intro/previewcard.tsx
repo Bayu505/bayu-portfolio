@@ -1,23 +1,25 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-type Preview = {
+interface Preview {
   title: string;
   image: string;
-};
+}
 
-type Props = {
+interface Props {
   preview: Preview | null;
-};
+}
 
 export default function PreviewCard({ preview }: Props) {
   return (
     <AnimatePresence>
+
       {preview && (
+
         <motion.div
           initial={{
             opacity: 0,
             x: 40,
-            scale: 0.95,
+            scale: .95,
           }}
           animate={{
             opacity: 1,
@@ -27,14 +29,15 @@ export default function PreviewCard({ preview }: Props) {
           exit={{
             opacity: 0,
             x: 40,
-            scale: 0.95,
+            scale: .95,
           }}
           transition={{
-            duration: 0.25,
+            duration: .25,
           }}
           className="
+            pointer-events-none
             absolute
-            left-0
+            left-[58%]
             top-1/2
             -translate-y-1/2
             h-[480px]
@@ -44,15 +47,20 @@ export default function PreviewCard({ preview }: Props) {
             border
             border-white/10
             bg-zinc-900
+            shadow-[0_40px_80px_rgba(0,0,0,.5)]
           "
         >
+
           <img
             src={preview.image}
             alt={preview.title}
             className="h-full w-full object-cover"
           />
+
         </motion.div>
+
       )}
+
     </AnimatePresence>
   );
 }

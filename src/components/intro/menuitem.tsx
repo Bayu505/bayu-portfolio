@@ -1,61 +1,44 @@
-"use client";
-
 import { motion } from "framer-motion";
 
+interface Menu {
+  title: string;
+  image: string;
+  href: string;
+}
+
+interface Props {
+  item: Menu;
+  setPreview: (item: Menu | null) => void;
+}
+
 export default function MenuItem({
-    item,
-    active,
-    onHover,
-}:any){
-
-return(
-
-<motion.a
-
-href={item.target}
-
-onMouseEnter={onHover}
-
-whileHover={{x:20}}
-
-className="group flex items-center gap-6 py-2"
-
->
-
-<span className="text-zinc-600 text-xl">
-
-{item.number}
-
-</span>
-
-<h2
-
-className={`
-text-[90px]
-font-black
-leading-none
-tracking-[-0.06em]
-transition-all
-duration-300
-
-${active
-
-?"text-[#C6FA00]"
-
-:"text-zinc-600"}
-
-group-hover:text-white
-
-`}
-
->
-
-{item.title}
-
-</h2>
-
-</motion.a>
-
-)
-
+  item,
+  setPreview,
+}: Props) {
+  return (
+    <motion.a
+      href={item.href}
+      whileHover={{
+        x: 15,
+      }}
+      onMouseEnter={() => setPreview(item)}
+      onMouseLeave={() => setPreview(null)}
+      className="
+        block
+        cursor-pointer
+        select-none
+        text-[72px]
+        font-black
+        leading-none
+        tracking-[-0.08em]
+        text-zinc-700
+        transition-all
+        duration-300
+        hover:text-white
+        md:text-[96px]
+      "
+    >
+      {item.title}
+    </motion.a>
+  );
 }

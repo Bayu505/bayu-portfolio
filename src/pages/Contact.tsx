@@ -4,18 +4,18 @@ import BackButton from "../components/layout/BackButton";
 const contactLinks = [
   {
     label: "EMAIL",
-    value: "your.email@gmail.com",
-    href: "mailto:your.email@gmail.com",
+    value: "bayuadiwibowo13@gmail.com",
+    href: "mailto:bayuadiwibowo13@gmail.com",
   },
   {
     label: "GITHUB",
-    value: "github.com/yourusername",
-    href: "https://github.com/yourusername",
+    value: "github.com/bayu505",
+    href: "https://github.com/bayu505",
   },
   {
     label: "LINKEDIN",
-    value: "linkedin.com/in/yourusername",
-    href: "https://linkedin.com/in/yourusername",
+    value: "linkedin.com/in/bayu-adi-wibowo",
+    href: "https://www.linkedin.com/in/bayu-adi-wibowo/",
   },
 ];
 

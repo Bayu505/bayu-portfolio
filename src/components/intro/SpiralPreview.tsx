@@ -403,9 +403,8 @@ export default function SpiralPreview() {
               key={item.id}
               type="button"
               onClick={() => 
-                navigate(item.route, { 
-                    state: { 
-                        fromMode: "spiral" } })}
+                navigate('${item.route}?mode=spiral')
+              }  
               className="
                 group
                 absolute

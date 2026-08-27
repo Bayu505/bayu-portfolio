@@ -403,7 +403,7 @@ export default function SpiralPreview() {
               key={item.id}
               type="button"
               onClick={() => 
-                navigate('${item.route}?mode=spiral')
+                navigate(`${item.route}?mode=spiral`)
               }  
               className="
                 group

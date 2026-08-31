@@ -24,13 +24,13 @@ const spiralItems: SpiralItem[] = [
     id: 3,
     title: "Skills",
     route: "/skills",
-    image: "/preview/skills.png",
+    image: "/preview/skills.jpg",
   },
   {
     id: 4,
     title: "Experience",
     route: "/experience",
-    image: "/preview/experience.png",
+    image: "/preview/experience.jpg",
   },
   {
     id: 5,

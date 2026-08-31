@@ -45,7 +45,7 @@ export default function ModeSwitcher() {
           }
         `}
       >
-        float
+        slide
       </button>
 
       <span

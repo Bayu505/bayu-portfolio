@@ -12,14 +12,12 @@ interface Props {
 export default function PreviewCard({ preview }: Props) {
   return (
     <AnimatePresence>
-
       {preview && (
-
         <motion.div
           initial={{
             opacity: 0,
             x: 40,
-            scale: .95,
+            scale: 0.95,
           }}
           animate={{
             opacity: 1,
@@ -29,38 +27,49 @@ export default function PreviewCard({ preview }: Props) {
           exit={{
             opacity: 0,
             x: 40,
-            scale: .95,
+            scale: 0.95,
           }}
           transition={{
-            duration: .25,
+            duration: 0.25,
+            ease: "easeOut",
           }}
           className="
             pointer-events-none
             absolute
-            left-[58%]
+
+            left-[clamp(52%,58%,64%)]
             top-1/2
+
             -translate-y-1/2
-            h-[480px]
-            w-[360px]
+
+            h-[clamp(320px,52vh,480px)]
+            w-[clamp(240px,24vw,360px)]
+
             overflow-hidden
-            rounded-[28px]
+
+            rounded-[clamp(20px,2vw,28px)]
+
             border
             border-white/10
+
             bg-zinc-900
-            shadow-[0_40px_80px_rgba(0,0,0,.5)]
+
+            shadow-[0_40px_80px_rgba(0,0,0,0.5)]
           "
         >
-
           <img
             src={preview.image}
             alt={preview.title}
-            className="h-full w-full object-cover"
+            draggable={false}
+            className="
+              h-full
+              w-full
+              object-cover
+            "
           />
-
         </motion.div>
-
       )}
-
     </AnimatePresence>
   );
 }
+
